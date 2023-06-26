@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
 
+    # local
+    'accounts',
+
 ]
 
 MIDDLEWARE = [
@@ -136,6 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # auth
 SITE_ID = 1
+AUTH_USER_MODEL = 'accounts.CustomUser'
 EMAIL_BACKEND = 'django.core.backends.mail.console.EmailBackend'
 
 AUTHENTICATION_BACKENDS = [
